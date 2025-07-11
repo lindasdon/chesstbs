@@ -57,7 +57,7 @@ public class MainClass
 					}
 				}
 				Console.WriteLine("{0} losses of {1}", losses, curloss+1);
-				break;
+
 				curloss++;
 			}
 		}
@@ -67,6 +67,6 @@ public class MainClass
 	{ return acsr.ReadInt16((wk*64*64*2 + bk*64*2 + wr*2 + btm)*2); }
 	public static void WriteKRK(MemoryMappedViewAccessor acsr,
 	int wk,int bk,int wr,int btm, short val)
-	{ acsr.Write((wk*64*64*2 + bk*64*2 + wr*2)*2,val); }
+	{ acsr.Write((wk*64*64*2 + bk*64*2 + wr*2 + btm)*2,val); }
 }	
 }
